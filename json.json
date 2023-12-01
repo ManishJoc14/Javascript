@@ -1,0 +1,12 @@
+[{
+    "user":"Manish",
+    "id" : 1,
+    "title" : "trying to learn ajax",
+    "address" : {"District": "kanchanpur","city":"Mahendranagar"}
+},
+{
+    "user":"Bibek",
+    "id" : 2,
+    "title" : "trying to learn ajax",
+    "address" : {"District":"kanchanpur","city":"Belauri"}
+}]
