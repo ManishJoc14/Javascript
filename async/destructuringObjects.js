@@ -1,17 +1,19 @@
 // Destructuring objects new way
 var user = {
-    name : "Manish",
+    Pname : "Manish",
     age : 19,
     city : "Belauri"
 }
-var {name,age,city} = user; 
+var {Pname,age,city} = user; 
 // note:- varible name should be same as property name
 // console.log(name,age,city);//Manish 19 Belauri
 
 //incase we only want name or city we can omit them 
-var {name,city} = user; 
-console.log(name,city);//Manish Belauri
+var {Pname,city} = user; 
+var newObj={Pname, city};
+console.log(newObj);
+// console.log(name,city);//Manish Belauri
 
 // incase we want different varible name 
-var {name : StudetName, age : Age, city : Address} = user ;
-console.log(StudetName);//Manish
+var {Pname : StudetName, age : Age, city : Address} = user ;
+// console.log(StudetName);//Manish

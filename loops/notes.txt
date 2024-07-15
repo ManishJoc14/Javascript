@@ -1,0 +1,169 @@
+### JavaScript Decision Making and Loops Study Notes
+
+#### Decision Making
+
+**1. if-else Statement**
+
+```javascript
+let age = 19;
+if (age < 18) {
+  console.log("you cannot vote");
+} else {
+  console.log("you can vote");
+}
+```
+- **if** checks a condition and runs code if the condition is true.
+- **else** runs code if the condition in the **if** statement is false.
+
+**2. if-else if-else Ladder**
+
+```javascript
+if (age < 10) {
+  console.log("minor");
+} else if (age > 10 && age < 18) {
+  console.log("teen");
+} else if (age > 18 && age < 25) {
+  console.log("adult");
+} else {
+  console.log("old");
+}
+```
+- Use multiple conditions to run different blocks of code based on the value of a variable.
+
+**3. Ternary Operator**
+
+```javascript
+let canVote = age > 18 ? "can vote" : "cannot vote";
+console.log(canVote);
+```
+- A shorthand for the **if-else** statement.
+- Syntax: `condition ? expression1 : expression2;`
+
+**4. switch-case Statement**
+
+```javascript
+let day = "sun";
+
+switch (day) {
+  case "sun":
+    console.log("Today is sunday");
+    break;
+  case "mon":
+    console.log("Today is monday");
+    break;
+  case "tue":
+    console.log("Today is tuesday");
+    break;
+  case "wed":
+    console.log("Today is wednesday");
+    break;
+  default:
+    console.log("wrong");
+    break;
+}
+```
+- A cleaner way to write multiple conditions that check the same variable.
+
+#### Loops
+
+**1. for Loop**
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+```
+- Use when the number of iterations is known.
+- Syntax: `for (initialization; condition; increment/decrement) { // code to run }`
+
+**2. while Loop**
+
+```javascript
+let i = 0;
+while (i < 10) {
+  i++; // increment
+  console.log(i);
+}
+```
+- Entry-controlled loop; the condition is checked before the loop body is executed.
+- Syntax: `while (condition) { // code to run }`
+
+**3. do-while Loop**
+
+```javascript
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
+```
+- Exit-controlled loop; runs at least once because the condition is checked after the loop body is executed.
+- Syntax: `do { // code to run } while (condition);`
+
+#### Special Loops
+
+**1. for-in Loop**
+- Used to iterate over the properties of an object.
+
+```javascript
+let obj = {a: 1, b: 2, c: 3};
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+```
+
+**2. for-of Loop**
+- Used to iterate over iterable objects like arrays.
+
+```javascript
+let arr = [10, 20, 30];
+for (let value of arr) {
+  console.log(value);
+}
+```
+
+**3. forEach Method**
+- Used to execute a function on each element of an array.
+
+```javascript
+arr.forEach(function(value) {
+  console.log(value);
+});
+```
+
+#### Logical Operators
+
+**1. Nullish Coalescing Operator (`??`)**
+- Returns the right-hand operand when the left-hand operand is `null` or `undefined`.
+
+```javascript
+let user;
+let defaultName = "Guest";
+let userName = user ?? defaultName;
+console.log(userName); // "Guest"
+```
+
+**2. OR Operator (`||`)**
+- Returns the right-hand operand when the left-hand operand is falsy (`false`, `0`, `NaN`, `""`, `null`, `undefined`).
+
+```javascript
+let user = null;
+let userName = user || "Guest";
+console.log(userName); // "Guest"
+```
+
+**3. AND Operator (`&&`)**
+- Executes the right-hand expression only if the left-hand expression is truthy.
+
+```javascript
+let user = "nabin";
+user && console.log(user); // "nabin"
+```
+- Equivalent to:
+```javascript
+if (user) {
+  console.log(user);
+}
+```
+
+These notes provide a comprehensive guide to decision making and loops in JavaScript, covering fundamental concepts and examples for better understanding and practical application.

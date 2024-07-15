@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script defer src="selecting.js"></script>
+    <script defer src="parentChild.js"></script>
+    <script defer src="creatingElements.js"></script>
+    <script defer src="readingElement.js"></script>
+    <script defer src="attributes.js"></script>
+    <script defer src="styling.js"></script>
+    <script defer src="heightAndWidths.js"></script>
+    <script defer src="eventHandling.js"></script>
+    <script defer src="keyboardEvents.js"></script>
+    <script defer src="mouseEvents.js"></script>
+
+
+    <style>
+      #email1{
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggleMode">Dark</button>
+    <!-- elements with id -->
+    <p id="para1">Paragraph with id para1</p>
+
+    <!-- elements with name attribute -->
+    <input
+      type="text"
+      name="email"
+      id="email1"
+      placeholder="Email1"
+      data-custom="custom data attribute"
+      data-imp="some imp data"
+      style="border: 1px dashed blue"
+    />
+    <input type="text" name="email" id="email2" placeholder="Email" />
+    <input type="text" name="password" id="password" placeholder="Password" />
+
+    <!-- elements h2 -->
+    <h2>First heading</h2>
+    <h2>Second heading</h2>
+    <h2>Third heading</h2>
+
+    <!-- Menu element -->
+    <ul id="menu">
+      <li class="item">HTML</li>
+      <li class="item">CSS</li>
+      <li class="item highlight">JavaScript</li>
+      <li class="item">TypeScript</li>
+    </ul>
+
+    <!-- query -->
+    <p id="query">Query</p>
+    <div class="container">
+      <p class="text">Text1</p>
+      <p class="text">Text2</p>
+      <p class="text">Text3</p>
+      <p class="text" style="display: none">Text4</p>
+    </div>
+
+    <!-- Parent node  -->
+    <div id="parent">
+      <!-- 0: node -->
+      <p class="child">This is a 1st element and 2: node inside parent!</p>
+      <p class="child child2">
+        This is a 2nd element and 4: node inside parent!
+      </p>
+      <p class="child">
+        This is a 3rd element(last element) and 6: node inside parent!
+      </p>
+      <!-- 7: node (last node) -->
+    </div>
+
+    <p id="insert">Add before me using before()</p>
+
+    <p id="app">App is here</p>
+
+    <!-- box -->
+     <div class="box">
+      Box
+     </div>
+
+     <!-- button -->
+      <button id="btn">Click Me</button>
+  </body>
+</html>

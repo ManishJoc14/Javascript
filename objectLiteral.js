@@ -40,7 +40,7 @@ var n = "name";
 var c = "course"
 var obj5 = {
     // we can access the value of variable and use them as key
-    [`Student${n}`]: "Bibek", // same as Student's name : "Bibek"
+    [`Student${n}`]: "Bibek", // same as Studentname : "Bibek"
     [`Student${c}`]: "Electronics", 
     // details : function (){
     //     return `${this.Studentname} is a student of ${this.Studentcourse}`;

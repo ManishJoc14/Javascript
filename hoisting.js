@@ -1,10 +1,18 @@
+// var foo = "bar"; // Declaring foo and assigning "bar" to it
+// var foo = "baz"; // I can redclare same varible twice with var in same scope , this will overwrite previous
+
+// let foo = "bar"; // Declaring foo and assigning "bar" to it
+// let foo = "baz"; // Identifier 'foo' has already been declared, cannot redeclare in same scope
+console.log(foo);
+
+
+
 // sayHello();
 // console.log(i);
-// function sayHello (){
-//     console.log("hello");
+// function sayHello() {
+//   console.log("hello");
 // }
-
-// var i=10;
+// var i = 10;  // var variables are hoisted
 
 /*
 phase 1 
@@ -33,11 +41,10 @@ phase 2 thread of execution
 
 // sayHello();
 // console.log(i);
-// function sayHello (){
-//     console.log("hello");
+// function sayHello() {
+//   console.log("hello");
 // }
-
-// let i=10;
+// let i = 10;        // let variables are not hoisted
 
 /*
 the variables declared by let are under temporal dead zone
@@ -45,8 +52,7 @@ that means until the variables are initialized we cannot access their values if 
 and code execution gets stopped.
 
 */
-
-
+// var sayHello, i ;
 // sayHello();
 // console.log(i);
 // var sayHello = function (){
@@ -60,41 +66,44 @@ and code execution gets stopped.
   is not a function .
 */
 
-
-
-// let foo = 'bar';
-// if(true){
-//     let foo = 'baz';
-//     console.log(foo);
-        //  baz
+// let foo = "bar"; // global variable
+// if (true) {
+//   let foo = "baz"; // local variable ; we cannot do var here, since food is already declared with global scope,
+//   // again we cannot declare foo with global scope (since var var doesn't consider block scope
+//   // it has a global scope or function scope)
+//   console.log(foo);
+//   //  baz
 // }
 // console.log(foo);
-      // bar
-// let follows block scope 
+// bar
+// let follows block scope
+// in this case, we're not actually redeclaring the same variable twice.
+// Instead, we're declaring two separate variables with the same name, each with its own scope.
+// priority of global varibale is less then local varibale
+// we can redeclare same varible but within different scopes
+
+// var foo = "bar"; // Global scope
+
+// if (true) {
+//   // Inside a block, but var doesn't respect block scope
+//   var foo = "baz"; // This reassigns the value of the global foo
+//   console.log(foo); // Output: baz
+// }
+
+// console.log(foo); // Output: baz (value reassigned in the block)
+
 
 // var foo = 'bar';
-// if(true){ //block scoope 
+// function sayHello(){ // function local scoope
 //     var foo = 'baz';
 //     console.log(foo);
 //     // baz
 // }
+// sayHello();
 // console.log(foo);
-// baz
-// variables defined with var changes its value in block 
-//  scope 
-
-
-var foo = 'bar';
-function sayHello(){ // function local scoope 
-    var foo = 'baz';
-    console.log(foo);
-    // baz
-}
-sayHello();
-console.log(foo);
 // bar
-// out of function scope variables defined with var are  
-// not changed 
+// out of function scope variables defined with var are
+// not changed
 
 /*
 at first Global execution context (GEC) is created in stack
